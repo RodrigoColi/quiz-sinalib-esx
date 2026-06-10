@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SinaLib — Quiz de LIBRAS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-blobs">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <div id="app" data-screen="home">
+
+    <header>
+      <div class="wordmark">Sina<span>Lib</span></div>
+      <h1>Quiz de <span class="brand">LIBRAS</span> · FAESA</h1>
+    </header>
+
+    <main>
+
+      <!-- ▸ HOME -->
+      <section class="screen screen-home" id="screen-home">
+        <div class="hand">🤟</div>
+        <h2 class="catchphrase">Aprenda <span class="brand">LIBRAS</span><br>com o SINA<span class="brand">LIB</span></h2>
+        <p class="tagline">Assista aos sinais e descubra o que eles significam</p>
+        <button class="btn-primary" id="btn-start">Começar</button>
+      </section>
+
+      <!-- ▸ INTRO VIDEO -->
+      <section class="screen screen-intro" id="screen-intro">
+        <div class="intro-wrap">
+          <video id="intro-video" playsinline preload="auto"></video>
+        </div>
+        <button class="btn-ghost" id="btn-skip">Pular introdução →</button>
+      </section>
+
+      <!-- ▸ READY PROMPT -->
+      <section class="screen screen-ready" id="screen-ready">
+        <h2 class="catchphrase">Pronto para o desafio?</h2>
+        <p class="tagline">Veja o sinal e escolha a alternativa certa</p>
+        <button class="btn-primary" id="btn-quiz">Iniciar quiz</button>
+      </section>
+
+      <!-- ▸ QUIZ -->
+      <section class="screen screen-quiz" id="screen-quiz">
+        <div class="quiz-grid">
+          <div class="quiz-left">
+            <div class="progress">
+              <span class="pill" id="progress-label">Pergunta 1 de 5</span>
+              <div class="dots" id="progress-dots"></div>
+            </div>
+            <div class="video-card" id="video-card">
+              <video id="quiz-video" muted playsinline preload="auto"></video>
+              <div class="replay-overlay" id="replay-overlay">⟲</div>
+            </div>
+            <button class="btn-ghost" id="btn-replay">⟲ Ver o sinal novamente</button>
+          </div>
+          <div class="quiz-right">
+            <h2 class="question">Qual é este sinal?</h2>
+            <div class="options" id="options"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ▸ SCORE -->
+      <section class="screen screen-score" id="screen-score">
+        <p class="score-label">Você acertou</p>
+        <div class="score-number" id="score-number">0/5</div>
+        <p class="score-message" id="score-message"></p>
+        <p class="score-countdown" id="score-countdown"></p>
+      </section>
+
+    </main>
+
+    <footer>SinaLib · FAESA — Educação que aproxima</footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
