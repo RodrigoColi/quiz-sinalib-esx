@@ -327,6 +327,13 @@ main { min-height: 0; display: grid; }
 /* ---- footer ---- */
 footer {
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1.4rem;
   color: var(--cinza);
+}
+.ig-handle {
+  display: block;
+  margin-top: 0.35rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--rosa);
 }
